@@ -1,0 +1,21 @@
+group 'com.barzi'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    jcraftVersion = '0.1.54'
+    commonsNetVersion = '3.3'
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile "com.jcraft:jsch:$jcraftVersion"
+    compile "commons-net:commons-net:$commonsNetVersion"
+}
